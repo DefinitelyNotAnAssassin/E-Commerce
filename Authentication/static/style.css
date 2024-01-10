@@ -1,0 +1,13 @@
+/* Error List Styling */
+.errorlist {
+    list-style-type: none;
+    color: red;
+    font-weight: bold;
+    margin: 0;
+    padding: 0;
+
+}
+
+.errorlist li {
+    margin-bottom: 5px;
+}

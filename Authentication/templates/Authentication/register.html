@@ -1,0 +1,39 @@
+{% extends 'Authentication/base.html' %}
+
+{% block content %}
+<div class="flex flex-col md:flex-row items-center h-screen">
+    <div class="flex h-full bg-white md:w-1/2 rounded mt-6 mb-8 mb-4 justify-center items-center">
+        
+        <form hx-post="{% url 'register' %}" hx-push-url="true" hx-target="body" class="w-full md:w-3/4 items-center md:p-20" autocomplete="off" onsubmit="return validateForm()">
+            <h2 class="text-2xl font-bold mt-6 text-center">User Registration</h2>
+
+            {% csrf_token %}
+
+            <div class="mb-4">
+                {{form.as_p}}
+            </div>
+            <div class="flex items-center justify-between">
+                <button
+                    class="w-full bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
+                    type="submit">
+                    Sign Up
+                </button>
+            </div>
+            <div class="mt-4 text-center">
+                <a class="inline-block align-baseline font-bold text-sm text-blue-500 hover:text-blue-800"
+                    href="#">Already have an account? Sign In</a>
+            </div>
+        </form>
+    </div>
+    <div class="    items-center justify-center h-full bg-gray-800 md:w-1/2 hidden md:flex ">
+        <h2 class="text-5xl font-bold mt-6 text-center text-white font-sans">Welcome to the world of <br> <span class="text-blue-500 font-sans">Commerce</span></h2>
+    </div>
+</div>
+    
+</div>
+
+<script>
+   
+</script>
+
+{% endblock content %}

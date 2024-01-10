@@ -1,0 +1,34 @@
+{% extends 'UserInterface/base.html' %}
+
+
+{% block content %}
+
+<div class="absolute m-auto left-0 right-0 h-screen w-screen">
+    <div>
+        <form hx-get = "{% url 'search' %}" hx-swap = "none" class = "w-full flex justify-center mt-8 ">
+            <input type="text" placeholder="Search products" name = "search" class="w-1/2 px-4 py-2 border border-gray-800 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent">
+            <button type="submit" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">Search</button>  
+        </form>
+    </div>
+    <div class = "h-full grid place-items-center">
+        <h2 class="text-4xl text-center ">Welcome to the future of E-Commerce</h2>
+    </div>
+   
+
+
+<div class = "flex flex-wrap w-screen h-screen items-center">
+    <div class="size-1/2 "></div>
+    <div class="size-1/2 "></div>
+    <div class="size-1/2 "></div>
+    <div class="size-1/2 "></div>
+</div>
+<div class = "flex flex-wrap w-screen h-screen items-center">
+    <div class="size-1/2 "></div>
+    <div class="size-1/2 "></div>
+    <div class="size-1/2 "></div>
+    <div class="size-1/2 "></div>
+</div>
+
+</div>
+
+{% endblock content %}
